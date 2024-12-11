@@ -8,4 +8,4 @@ for file in os.listdir('./src/'):
 
 if len(files) > 0:
     cmd = 'kotlinc ' + ' '.join(files) + ' -include-runtime -d app.jar'
-    print(cmd)
+    os.system(cmd)
