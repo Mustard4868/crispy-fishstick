@@ -24,10 +24,6 @@
 hs_err_pid*
 replay_pid*
 
-# draw.io stuff
-*.dtmp
-
-
 ### IntelliJ IDEA ###
 out/
 !**/src/main/**/out/
