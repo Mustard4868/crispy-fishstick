@@ -1,3 +1,6 @@
+import services.CryptographyService
+
 fun main() {
-    println("Hello World!")
+    val keypair = CryptographyService().generateKeypair()
+    println("Generated keypair: $keypair")
 }
