@@ -4,7 +4,7 @@ import java.security.SecureRandom
 import java.util.Base64
 
 class KeygenService {
-    fun generateKeypair(): Map<String, String> {
+   fun generateKeypair(): Map<String, String> {
         val length = 2048
         val random = SecureRandom()
         val keypair = mapOf(
