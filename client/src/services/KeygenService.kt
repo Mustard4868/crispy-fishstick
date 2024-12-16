@@ -1,16 +1,12 @@
 package services
 
-import java.security.SecureRandom
-import java.util.Base64
+import java.security.KeyPair
+import java.security.KeyPairGenerator
 
 class KeygenService {
-   fun generateKeypair(): Map<String, String> {
-        val length = 2048
-        val random = SecureRandom()
-        val keypair = mapOf(
-            "public" to Base64.getEncoder().encodeToString(random.generateSeed(length)),
-            "private" to Base64.getEncoder().encodeToString(random.generateSeed(length))
-        )
-        return keypair
+    fun generateKeyPair(): KeyPair {
+        val keyPairGenerator = KeyPairGenerator.getInstance("RSA")
+        keyPairGenerator.initialize(2048)
+        return keyPairGenerator.generateKeyPair()
     }
 }
