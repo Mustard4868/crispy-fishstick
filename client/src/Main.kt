@@ -1,6 +1,6 @@
-import services.CryptographyService
+import services.KeygenService
 
 fun main() {
-    val keypair = CryptographyService().generateKeypair()
+    val keypair = KeygenService().generateKeypair()
     println("Generated keypair: $keypair")
 }
